@@ -112,13 +112,14 @@ export default {
       { photo: this.persone.data.photo },
       { id: this.persone.id }
     );
+    console.log(client);
   },
 
   methods: {
     //Добавил картинку через URL , при необходимости можно переделать на добавление через File API, но самый адекватный способ конечно же сделать обработчкик на стороне бэка и добавлять файл через form-data
     editData() {
       if (this.$refs.form.validate()) {
-        this.$store.commit("SET_PERSONE", this.info);
+        this.$store.commit("SET_CLIENTS", this.info);
         this.text = "Данные обнавлены";
         this.snackbar = true;
         this.edit = false;

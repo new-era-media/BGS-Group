@@ -16,14 +16,11 @@ export const state = () => ({
 export const getters = {
   CLIENTS: state => {
     return state.clients;
-  },
-  PERSONE: state => {
-    return state.persone;
   }
 };
 
 export const mutations = {
-  SET_PERSONE: (state, payload) => {
+  SET_CLIENTS: (state, payload) => {
     state.clients.forEach((element, i) => {
       if (element.id == payload.id) {
         state.clients[i].email = payload.email;
