@@ -1,6 +1,7 @@
+
 ## Build Setup
 
-```bash
+``` bash
 # install dependencies
 $ npm run install
 
@@ -16,7 +17,10 @@ $ npm run generate
 ```
 
 # launch a project using docker
+docker build -t vuejs-cookbook/dockerize-vuejs-app .
 
-docker build -t registry.gitlab.com/vik_kod/nuxtjs_docker_example .
+docker run -it -p 8080:80 --rm --name dockerize-vuejs-app-1 vuejs-cookbook/dockerize-vuejs-app
 
-docker run -p 3000:3000 registry.gitlab.com/vik_kod/nuxtjs_docker_example
+
+
+

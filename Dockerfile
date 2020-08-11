@@ -1,7 +1,16 @@
-FROM node:10-alpine
-ENV APP_ROOT /web
-WORKDIR ${APP_ROOT}
-ADD . ${APP_ROOT}
-RUN npm ci
+FROM node:lts-alpine
+
+RUN npm install -g http-server
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
 RUN npm run build
-CMD ["npm", "run", "start"]
+
+EXPOSE 8080
+CMD [ "http-server", "dist" ]
