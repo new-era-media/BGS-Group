@@ -4,6 +4,7 @@ export const state = () => ({
       email: "admin@mail.ru",
       password: "123456",
       id: "1",
+      auth: false,
       data: {
         name: "Admin",
         photo:
@@ -28,5 +29,5 @@ export const mutations = {
         state.clients[i].data.photo = payload.photo;
       }
     });
-  }
+  },
 };

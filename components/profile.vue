@@ -86,7 +86,7 @@
             ></v-text-field>
           </v-list-item>
 
-          <div class="my-2">
+          <div class="mx-12 my-2">
             <v-btn @click="editData" small color="primary">Primary</v-btn>
           </div>
         </v-form>
@@ -120,7 +120,6 @@ export default {
       { photo: this.persone.data.photo },
       { id: this.persone.id }
     );
-    console.log(client);
   },
 
   methods: {

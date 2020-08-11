@@ -52,7 +52,6 @@ export default {
   }),
   methods: {
     auth() {
-      console.log(this.$refs.form.validate());
       if (this.$refs.form.validate()) {
         let clients = this.$store.getters.CLIENTS;
         let persone = clients.find((x) => x.email === this.email);

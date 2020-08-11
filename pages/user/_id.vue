@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <profile/>
+    <profile />
   </div>
 </template>
 
 <script>
-import profile from '~/components/profile'
+import profile from "~/components/profile";
 export default {
-  components: {profile},
+  components: { profile }
 };
 </script>
