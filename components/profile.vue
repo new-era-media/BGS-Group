@@ -25,7 +25,7 @@
           <v-list-item-content>
             <v-img
               class="avatar"
-              src="https://ru.hellomagazine.com/thumb/755x550_0/images/2020/april/veronika/eminem-zahod.jpg"
+              :src="info.photo"
               aspect-ratio="0.3"
               max-width="100"
               height="100"
@@ -126,6 +126,7 @@ export default {
     //Добавил картинку через URL , при необходимости можно переделать на добавление через File API, но самый адекватный способ конечно же сделать обработчкик на стороне бэка и добавлять файл через form-data
     editData() {
       if (this.$refs.form.validate()) {
+        console.log(this.info)
         this.$store.commit("SET_CLIENTS", this.info);
         this.text = "Данные обнавлены";
         this.snackbar = true;
